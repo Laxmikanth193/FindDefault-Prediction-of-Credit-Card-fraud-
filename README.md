@@ -41,17 +41,45 @@ The majority of features are in PCA (Principal Component Analysis) form, with th
 
 Now we will check the number of occurances of each class label and we will plot the information using matplotlib.
 
-• We can see that our Non-Fraudulent transactions are over 99%. • We will apply scaling techniques on the "Amount" feature to transform the range of values. • We will drop the original "Amount" column and add a new column with the scaled values. We will also drop the "Time" columns as it is irrelevant. • Now, we will split the credit card data with a split of 70-30 using train_test_split(). • train_test_split() function in scikit-learn is a useful utility for splitting a dataset into training and testing sets.
+• We can see that our Non-Fraudulent transactions are over 99%. 
 
-• Parameters • X: Feature matrix • Y: Target variable • test_size: Proportion of the dataset to include in the test split. Here we have set the test_size as 0.3 means 30% of the data we take as testing data set. • random_state: We have set the seed for random number generation, to ensure the reproducibility.
+• We will apply scaling techniques on the "Amount" feature to transform the range of values. 
+
+• We will drop the original "Amount" column and add a new column with the scaled values. We will also drop the "Time" columns as it is irrelevant. 
+
+• Now, we will split the credit card data with a split of 70-30 using train_test_split(). 
+
+• train_test_split() function in scikit-learn is a useful utility for splitting a dataset into training and testing sets.
+
+• Parameters 
+
+• X: Feature matrix 
+
+• Y: Target variable 
+
+• test_size: Proportion of the dataset to include in the test split. Here we have set the test_size as 0.3 means 30% of the data we take as testing data set. 
+
+• random_state: We have set the seed for random number generation, to ensure the reproducibility.
 
 Applying Machine Learning Algorithm to Credit Card Dataset
 
-• We will explore various machine learning algorithms to find the most effective model for our binary classification problem. • The task involves predicting one of the two class labels. We plan to access the performance of different algorithms, such as Random Forest and Decision Tree, to identify the most suitable solution for our specific problem.
+• We will explore various machine learning algorithms to find the most effective model for our binary classification problem. 
+
+• The task involves predicting one of the two class labels. We plan to access the performance of different algorithms, such as Random Forest and Decision Tree, to identify the most suitable solution for our specific problem.
 
 Here, We understand the confusion matrix for the random forest as well as for the decision tree.
 
-Class-Imbalance • The Random Forest classifier has slightly a better result over the Decision Tree Classifier. • In a class Imbalance issue, where genuine transactions account for over 99% of the dataset and credit card fraud transactions constitute only 0.17%. • Training the model without addressing the imbalance can lead to biased predictions. • Despite the apparent accuracy, such a model may not effectively capture the nuances of the minority class (fraud transactions) and may not generalize well to real-world situations. • The class imbalance problem can be solved by various techniques. Oversampling is one of them.
+**Class-Imbalance** 
+
+• The Random Forest classifier has slightly a better result over the Decision Tree Classifier. 
+
+• In a class Imbalance issue, where genuine transactions account for over 99% of the dataset and credit card fraud transactions constitute only 0.17%. 
+
+• Training the model without addressing the imbalance can lead to biased predictions. 
+
+• Despite the apparent accuracy, such a model may not effectively capture the nuances of the minority class (fraud transactions) and may not generalize well to real-world situations. 
+
+• The class imbalance problem can be solved by various techniques. Oversampling is one of them.
 
 We will use the SMOT (Synthetic Minority Oversampling Technique, or SMOTE).
 
